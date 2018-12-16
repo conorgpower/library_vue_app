@@ -1,6 +1,25 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <b-navbar toggleable="md" variant="dark" type="dark">
+      <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
+      <img src="./assets/book.png" width="60" height="60" class="img-circle" style="padding: 1px">
+      <b-navbar-brand to="/">WIT Library Web App</b-navbar-brand>
+      <b-collapse is-nav id="nav_collapse">
+        <b-navbar-nav>
+          <b-nav-item to="/#"><i class="fa fa-home" style="padding: 5px"> Home</i></b-nav-item>
+          <b-nav-item to="/books"><i class="fa fa-list" style="padding: 5px"> Manage Books</i></b-nav-item>
+          <b-nav-item to="/returnBook"><i class="fa fa-money" style="padding: 5px"> Return Book</i></b-nav-item>
+          <b-nav-item to="/map"><i class="fa fa-globe" style="padding: 5px"> Map</i></b-nav-item>
+        </b-navbar-nav>
+        <b-navbar-nav class="ml-auto">
+          <b-nav-item to="/aboutUs"><i class="fa fa-info" style="padding: 5px"> About Us</i></b-nav-item>
+          <b-nav-item to="/contactUs"><i class="fa fa-comment" style="padding: 5px"> Contact Us</i></b-nav-item>
+          <b-nav-item to="/login"><i class="fa fa-sign-in" style="padding: 5px"> Login </i></b-nav-item>
+          <b-nav-item to="/logout"><i class="fa fa-sign-out" style="padding: 5px"> Logout </i></b-nav-item>
+          <i class="fa fa-pied-piper-alt fa-1x" style="padding: 5px; color: white;"></i>
+        </b-navbar-nav>
+      </b-collapse>
+    </b-navbar>
     <router-view/>
   </div>
 </template>
