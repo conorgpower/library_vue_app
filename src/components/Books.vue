@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import BookService from '@/services/BookService'
+import bookServices from '@/services/bookServices'
 import Vue from 'vue'
 import VueTables from 'vue-tables-2'
 
@@ -20,7 +20,7 @@ export default {
   data () {
     return {
       messagetitle: ' Book List ',
-      books: [],
+      books: [{ '_id': String, 'bookName': String, 'author': String, 'stock': Number }],
       errors: [],
       columns: ['_id', 'bookName', 'author', 'stock'],
       options: {
@@ -39,7 +39,7 @@ export default {
   },
   methods: {
     loadBooks: function () {
-      BookService.fetchBooks()
+      bookServices.fetchBooks()
         .then(response => {
           // JSON responses are automatically parsed.
           this.books = response.data

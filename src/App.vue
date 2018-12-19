@@ -2,7 +2,7 @@
   <div id="app">
     <b-navbar toggleable="md" variant="dark" type="dark">
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-      <img src="./assets/book.png" width="60" height="60" class="img-circle" style="padding: 1px">
+      <img src="../../wit_library_vue_app/src/assets/book.png" width="60" height="60" class="img-circle" style="padding: 1px">
       <b-navbar-brand to="/">WIT Library Web App</b-navbar-brand>
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav>
