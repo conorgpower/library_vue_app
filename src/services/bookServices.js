@@ -7,5 +7,17 @@ export default {
   postBook (book) {
     return Api().post('/books', book,
       { headers: {'Content-type': 'application/json'} })
+  },
+  increaseStock (id) {
+    return Api().put(`/books/${id}/returnExistingBook`)
+  },
+  deleteBook (id) {
+    return Api().delete(`/books/${id}`)
+  },
+  putBookAuthor (id, book) {
+    console.log('REQUESTING ' + book._id + ' ' +
+      JSON.stringify(book, null, 5))
+    return Api().put(`/books/${id}/updateBookName`, book,
+      { headers: {'Content-type': 'application/json'} })
   }
 }

@@ -5,6 +5,7 @@ import Books from '@/components/Books'
 import ReturnBook from '@/components/ReturnBook'
 import AboutUs from '@/components/AboutUs'
 import ContactUs from '@/components/ContactUs'
+import Edit from '@/components/Edit'
 
 Vue.use(Router)
 
@@ -34,6 +35,12 @@ export default new Router({
       path: '/contactUs',
       name: 'ContactUs',
       component: ContactUs
+    },
+    {
+      path: '/edit',
+      name: 'Edit',
+      component: Edit,
+      props: true
     }
   ]
 })

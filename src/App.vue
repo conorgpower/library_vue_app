@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="backgroundPic">
     <b-navbar toggleable="md" variant="dark" type="dark">
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
       <img src="../../wit_library_vue_app/src/assets/book.png" width="60" height="60" class="img-circle" style="padding: 1px">
@@ -31,12 +31,29 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    padding-top: 20px;
+    overflow: hidden;
+  }
+  .backgroundPic {
+    width: 100%;
+    height: 400%;
+    background-size: 400% 400%;
+    background: url("assets/background.png") fixed;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: top center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed;
+  }
+  .VueTables__sortable {
+    cursor: pointer;
+  }
 </style>
