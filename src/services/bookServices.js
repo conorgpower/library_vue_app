@@ -19,5 +19,8 @@ export default {
       JSON.stringify(book, null, 5))
     return Api().put(`/books/${id}/updateBookAuthor`, book,
       { headers: {'Content-type': 'application/json'} })
+  },
+  fetchTotalBooks () {
+    return Api().get('/books/totalBooks')
   }
 }

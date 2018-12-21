@@ -1,0 +1,82 @@
+Name:        Conor Power
+StudentID:   20075871
+
+Functionality:
+This is a Vue Web Server application to manage the a library's inventory.
+The application works with a Node web server application on the back end.
+The web application in uses the Vue framework to run the front end of a web application.
+App displays CRUD functionality.
+YouTube, Google Maps and Facebook APIs.
+Deployed using Firebase.
+
+The web application contains the following:
+
+Navigation Bar -
+A navigation bar that is used to get to different pages.
+
+Home -
+A simple home page with some text and a gif.
+
+Manage Books -
+A page that displays all books from a mLab database connected to the node app.
+All books data is stored neatly in a vue table.
+From here the user can:
+Return a book by using increasing stock option.
+Edit book name
+Edit book author
+Delete book
+Sort books by stock
+Filter books by name, author or stock
+
+Return Book -
+Here the user is prompted to enter the books details and the click to return the new book.
+
+Map -
+This displays the location of WIT in a Google API map.
+
+About Us -
+This displays a video integrated with the YouTube API.
+
+Contact Us -
+This uses the Facebook and Google Maps API's.
+Live Facebook stream of WIT's feed shown.
+Link to WIT twitter.
+
+ESLint was used in order to keep the project's code layout professional and industry standard.
+Cloud support via mLab.
+
+GitHub: https://github.com/conorgpower/library_vue_app
+Firebase Hosting URL: https://wit-library-vue.firebaseapp.com/#/
+
+YouTube:
+
+Sources;
+David Drohan - Lab Tutorials
+
+
+
+
+
+Node End:
+Node GitHub: https://github.com/conorgpower/wit-library-app
+
+Using a RESTful API the following features have been added to the Node application:
+POST - Add a book to the system in JSON format
+POST - Add user to the system in JSON format
+GET - Find all books
+GET - Find total number of books in library
+GET - Find a specific book by ID
+GET - Find a books name by ID
+GET - Find a books author by ID
+GET - Find a books stock by ID
+PUT - Return existing book (increment stock)
+PUT - Update book name
+PUT - Update book author
+DELETE - Remove book from inventory by ID
+DELETE - Remove user from database by ID
+
+The Node app displays persistence using mLab for users and books.
+The Node app is deployed using Heroku - www.wit-library-app.herokuapp.com
+
+Sources;
+David Drohan - Lab Tutorials
