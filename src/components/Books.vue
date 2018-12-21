@@ -5,7 +5,8 @@
       <v-client-table :columns="columns" :data="books" :options="options">
         <a slot="increaseStock" slot-scope="props" class="fa fa-thumbs-up fa-2x" @click="increaseStock(props.row._id)"></a>
         <a slot="delete" slot-scope="props" class="fa fa-trash-o fa-2x" @click="deleteBook(props.row._id)"></a>
-        <a slot="editBookName" slot-scope="props" class="fa fa-edit fa-2x" @click="editBook(props.row._id)"></a>
+        <a slot="editBookName" slot-scope="props" class="fa fa-edit fa-2x" @click="editBookName(props.row._id)"></a>
+        <a slot="editAuthor" slot-scope="props" class="fa fa-edit fa-2x" @click="editAuthor(props.row._id)"></a>
       </v-client-table>
     </div>
   </div>
@@ -26,7 +27,7 @@ export default {
       props: ['_id'],
       books: [{ '_id': String, 'bookName': String, 'author': String, 'stock': Number }],
       errors: [],
-      columns: ['_id', 'bookName', 'author', 'stock', 'increaseStock', 'editBookName', 'delete'],
+      columns: ['_id', 'bookName', 'author', 'stock', 'increaseStock', 'editBookName', 'editAuthor', 'delete'],
       options: {
         perPage: 10,
         filterable: ['bookName', 'author', 'stock'],
@@ -37,7 +38,8 @@ export default {
           author: 'Author',
           stock: 'Stock',
           increaseStock: 'Return Book',
-          editBookName: 'Edit',
+          editBookName: 'Edit Name',
+          editAuthor: 'Edit Author',
           delete: 'Delete Book'
         }
       }
@@ -65,6 +67,7 @@ export default {
       bookServices.increaseStock(id)
         .then(response => {
           console.log(response)
+          this.loadBooks()
         })
         .catch(error => {
           this.errors.push(error)
@@ -81,9 +84,13 @@ export default {
           console.log(error)
         })
     },
-    editBook: function (id) {
+    editBookName: function (id) {
       this.$router.params = id
-      this.$router.push('edit')
+      this.$router.push('editBookName')
+    },
+    editAuthor: function (id) {
+      this.$router.params = id
+      this.$router.push('editAuthor')
     }
   }
 }

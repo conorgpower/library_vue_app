@@ -7,7 +7,7 @@
         <td>
           <p class="lead"><b><i>Online Library Service</i></b>
           <p>With online library services, studying has never been so easy.</p>
-          <p>Just click <a href ="/donate">here</a> to go to</p>
+          <p>Just click <a href ="/#/books">here</a> to go to</p>
           <p>the Book Management page and return or withdraw a book.</p>
         </td>
         <td>

@@ -17,7 +17,7 @@ export default {
   putBookAuthor (id, book) {
     console.log('REQUESTING ' + book._id + ' ' +
       JSON.stringify(book, null, 5))
-    return Api().put(`/books/${id}/updateBookName`, book,
+    return Api().put(`/books/${id}/updateBookAuthor`, book,
       { headers: {'Content-type': 'application/json'} })
   }
 }

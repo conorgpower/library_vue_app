@@ -1,12 +1,12 @@
 <template>
   <div id="app1" class="hero">
-    <h3 class="vue-title"><i class="fa fa-money" style="padding: 3px"></i>{{messagetitle}}</h3>
+    <h3 class="vue-title"><i class="fa fa-edit" style="padding: 3px"></i>{{messagetitle}}</h3>
     <div class="container mt-3 mt-sm-5">
       <div class="row justify-content-center">
         <div class="col-md-6">
           <template v-if="childDataLoaded">
             <book-form :book="book" bookBtnTitle="Update Book"
-                           @book-is-created-updated="updateBook"></book-form>
+                       @book-is-created-updated="updateBook"></book-form>
           </template>
         </div><!-- /col -->
       </div><!-- /row -->
@@ -16,7 +16,7 @@
 
 <script>
 import bookServices from '@/services/bookServices'
-import BookForm from '@/components/BookForm'
+import UpdateAuthorForm from '@/components/UpdateAuthorForm'
 
 export default {
   data () {
@@ -24,11 +24,11 @@ export default {
       book: {},
       childDataLoaded: false,
       temp: {},
-      messagetitle: ' Update Donation '
+      messagetitle: ' Update Author '
     }
   },
   components: {
-    'book-form': BookForm
+    'book-form': UpdateAuthorForm
   },
   created () {
     this.getBook()

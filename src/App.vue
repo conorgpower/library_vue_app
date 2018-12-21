@@ -8,7 +8,7 @@
         <b-navbar-nav>
           <b-nav-item to="/#"><i class="fa fa-home" style="padding: 5px"> Home</i></b-nav-item>
           <b-nav-item to="/books"><i class="fa fa-list" style="padding: 5px"> Manage Books</i></b-nav-item>
-          <b-nav-item to="/returnBook"><i class="fa fa-money" style="padding: 5px"> Return Book</i></b-nav-item>
+          <b-nav-item to="/returnBook"><i class="fa fa-book" style="padding: 5px"> Return Book</i></b-nav-item>
           <b-nav-item to="/map"><i class="fa fa-globe" style="padding: 5px"> Map</i></b-nav-item>
         </b-navbar-nav>
         <b-navbar-nav class="ml-auto">
@@ -39,11 +39,12 @@ export default {
     font-size: 20px;
     color: white;
     padding-top: 20px;
+    padding-bottom: 400px;
     overflow: hidden;
   }
   .backgroundPic {
     width: 100%;
-    height: 400%;
+    height: 100%;
     background-size: 400% 400%;
     background: url("assets/background.png") fixed;
     -moz-background-size: cover;
